@@ -69,7 +69,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-# TODO
+# Segunda entrega WEB2
+
+Nessa segunda prosseguimos com a implementação do site de uma pizzaria. Os integrantes do projeto são:  
+- Igor Teixeira Machado RA: 769708  
+- João Ricardo Lopes Lovato RA: 772138  
+- Matheus Teixeira Mattioli RA: 769783  
 
 ## Requisitos e Ideias
 
