@@ -72,9 +72,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 # TODO
 
 Ideias em progresso para essa segunda etapa do projeto:   
-    - Apenas duas telas: .Login; .Cardápio.
-    - Na barra de navegação: botão clickavel e expandivel via javascript, ao invés da gambiarra da checkbox.
-    - No login: API de login. (validar o usuário)
+    - Apenas duas telas: Login e Cardápio.  
+    - Na barra de navegação um botão clickavel e expandivel via javascript, ao invés do truque da checkbox.  
+    - No login: Login validando no backend, não precisa de cadastro, podemos deixar usuários pré-cadastrados.  
     - No cardápio: Botão para filtrar o sabor de pizza, por nome e preço. Colocar preço nas pizzas, ao clickar no botão de comprar, subir pop-up para calcular
 valor da entrega conforme a geolocalização.  
 
@@ -82,9 +82,9 @@ Essas ideias cumprem os 5 requisitos:
     - R1: O aplicativo deve ter uma identidade visual e um layout bem definidos, 
     usando os conceitos de layout vistos no curso. Este requisito é um pouco subjetivo, 
     mas a ideia é que o aplicativo tenha aparência de um aplicativo real, algo que você mostraria a um amigo (ou um investidor, quem sabe?). 
-    Uma paleta de cores bem pensada, seguindo o Material Design, por exemplo, é essencial!
-    - R2: O aplicativo deve ter mais do que uma tela/página. (tem uma identidade)
-    - R3: O aplicativo deve acessar a rede. O acesso à rede pode ser com um back-end falso, mas deve existir e estar implementado. (backend para login)
-    - R4: O aplicativo deve possuir layout responsivo, sendo adequado para visualização em celulares/tablets/desktop. (já está feito)
+    Uma paleta de cores bem pensada, seguindo o Material Design, por exemplo, é essencial!  
+    - R2: O aplicativo deve ter mais do que uma tela/página. (tem uma identidade)  
+    - R3: O aplicativo deve acessar a rede. O acesso à rede pode ser com um back-end falso, mas deve existir e estar implementado. (backend para login)  
+    - R4: O aplicativo deve possuir layout responsivo, sendo adequado para visualização em celulares/tablets/desktop. (já está feito)  
     - R5: O aplicativo deve utilizar alguma API adicional, tais como geolocalização, storage, web workers, etc. (Storage para login, web workers para pesquisar e 
-    geolocalização pro cálculo do frete)
+    geolocalização pro cálculo do frete)  
