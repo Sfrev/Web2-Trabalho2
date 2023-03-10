@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>carrinho</title>
+  <meta name="description" content="Site para compra de Pizzas">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Solitreo&display=swap" rel="stylesheet">
+  <link href="carrinho.css">
+  <script src="nav-button.js" defer></script>
+</head>
+
+<body class="antialiased bg-gradient-to-r from-green-600 via-white to-red-600">
+  <header>
+      <nav
+      class="flex flex-wrap  items-center  justify-between w-full text-lg text-gray-700 bg-white p-2">
+          <div>
+              <!-- Logo -->
+              <ul class="
+                          text-base text-gray-700
+                          flex
+                          justify-between
+                          pt-0">
+                  <li>
+                      <a href="/">
+                          <img src="pizza-logo.png" alt="Logo" class="w-16 h-16">
+                      </a>
+                  </li>
+                  <li class="flex justify-content items-center">
+                      <a class="font-caveat block ml-3 text-4xl" href="/">
+                          Pizzaria Peça Já
+                      </a>
+                  </li>
+              </ul>
+          </div>
+          <!-- Hamburger Button -->
+          <label id='label-dropdown-navbar-menu' for='checkbox-dropdown-navbar-menu' class="inline-flex items-center px-4 py-4 text-sm text-gray-500 rounded-lg hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-red-200 active:bg-red-500 active:shadow-lg transition duration-150 ease-in-out md:hidden cursor-pointer">
+            <i class='material-symbols-outlined w-6 h-6'>
+                menu
+            </i>
+        </label>
+        <input type='checkbox' id='checkbox-dropdown-navbar-menu' class="hidden"/>
+      
+          <!-- Conteudo da nav bar -->
+          <div class="hidden w-full md:flex md:items-center md:w-auto md:justify-between" id="target">
+              <ul class="
+                              text-base text-gray-700
+                              pt-4
+                              md:flex
+                              md:justify-between
+                              md:pt-0">
+                  <li>
+                      <a class="md:p-4 py-2 block hover:text-red-400" href="/">
+                      Cardápio
+                      </a>
+                  </li>
+                  <li>
+                      <a class="md:p-4 py-2 block hover:text-red-400" href="/carrinho">
+                      <!-- Carrinho -->
+                      Pedido
+                      </a>
+                  </li>
+                  <li>
+                      <a class="md:p-4 py-2 block hover:text-red-400 text-red-600" href="/login">
+                      Log in
+                      </a>
+                  </li>
+              </ul>
+          </div>
+          <!-- </div> -->
+      </nav>
+  </header>
+
+
+  <!-- TRABALHO EM PROGRESSO -->
+  <!-- <div class=" mt-32 ml-96 mr-96 antialiased bg-gradient-to-r from-green-600 via-white to-red-600 ">
+    <div class="grid grid-cols-3 gap-4 content-center h-20">
+        <div>
+            <img src="pizza-logo.png" alt="Logo" class="w-16 h-16 ml-60">
+        </div>
+        <div>
+            <h1 class="text-6xl text-center">PEDIDOS</h1>
+        </div>
+        <div>
+            <img src="pizza-logo.png" alt="Logo" class="w-16 h-16 mr-60">
+        </div>
+    </div>
+        
+    </div>
+    <div class="bg-white ml-96 mr-96 grid grid-cols-3 content-start ">
+
+                <h1 class="text text-4xl bg-green-500">calabresa</h1>
+
+                <button class="hover:bg-green-700 rounded">V</button>
+                <button class="hover:bg-red-700">X</button>
+
+                <h1 class="text text-4xl bg-red-400">frango</h1>
+
+                <button class="hover:bg-green-700">V</button>
+                <button class="hover:bg-red-700">X</button>
+
+                <h1 class="text text-4xl bg-green-500">queijo</h1>
+
+                <button class="hover:bg-green-700">V</button>
+                <button class="hover:bg-red-700">X</button>
+
+                <h1 class="text text-4xl bg-red-400">amongus</h1>
+
+                <button class="hover:bg-green-700">V</button>
+                <button class="hover:bg-red-700">X</button>
+
+                <h1 class="text text-4xl bg-green-500">agaragan</h1>
+
+                <button class="hover:bg-green-700">V</button>
+                <button class="hover:bg-red-700">X</button>
+
+    </div>
+  </div>
+    
+    
+    
+  </div> -->
+</body>
+
+</html>
