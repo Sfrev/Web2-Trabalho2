@@ -53,7 +53,7 @@ router.post('/authenticate', async (req, res) => {
     /*
     Exemplo de requisição:
     {
-        "email" : "
+        "email" : "",
         "password" : "fasidfghsdiads",
     }
     */
