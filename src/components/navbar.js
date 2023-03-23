@@ -5,13 +5,12 @@ import { useState } from "react";
 export function Navbar() {
     const [floatMenuShown, setFloatMenuShown] = useState(false);
 
-    const toggleFloatMenuShown = (event) => {
+    function toggleFloatMenuShown() {
         setFloatMenuShown(!floatMenuShown);
-        event.stopPropagation()
     }
 
     return (
-        <nav className="flex flex-wrap  items-center  justify-between w-full text-lg text-gray-700 bg-white p-2">
+        <nav className="flex flex-wrap  items-center  justify-between w-full text-lg text-gray-700 bg-slate-100 p-2">
             <div>
                 {/* Logo */}
                 <ul className="text-base text-gray-700 flex justify-between pt-0">
@@ -27,12 +26,15 @@ export function Navbar() {
                         </li>
                     </ul>
             </div>
-            <label id='label-dropdown-navbar-menu' for='checkbox-dropdown-navbar-menu' class="inline-flex items-center px-4 py-4 text-sm text-gray-500 rounded-lg hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-red-200 active:bg-red-500 active:shadow-lg transition duration-150 ease-in-out md:hidden cursor-pointer">
+            {/* Dropdown Menu */}
+            <label id='label-dropdown-navbar-menu' for='dropDown' onClick={toggleFloatMenuShown}
+            className="inline-flex items-center px-4 py-4 text-sm text-gray-500 rounded-lg hover:bg-red-100 focus:outline-none focus:ring-2
+             focus:ring-red-200 active:bg-red-500 active:shadow-lg transition duration-150 ease-in-out md:hidden cursor-pointer">
                     <i class='material-symbols-outlined w-6 h-6'>
                         menu
                     </i>
-                </label>
-                <input type='checkbox' id='checkbox-dropdown-navbar-menu' class="hidden"/>
+            </label>
+                
             <div className="hidden w-full md:flex md:items-center md:w-auto md:justify-between" id="target">
                     <ul className="
                                     text-base text-gray-700
