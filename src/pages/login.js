@@ -37,7 +37,7 @@ function Login() {
 
   return (
     <div className="antialiased bg-gradient-to-r from-green-500 via-white to-red-500">
-      <header className="sticky top-0">
+      <header>
         <Navbar />
       </header>
       <section className="h-full gradient-form md:h-screen ">

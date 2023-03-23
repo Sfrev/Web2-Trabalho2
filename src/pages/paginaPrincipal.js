@@ -5,7 +5,7 @@ function PaginaPrincipal() {
     return (
         <div className="antialiased bg-gradient-to-r from-green-500 via-white to-red-500 scroll-smooth">
             {/* <!-- Navbar --> */}
-            <header className="relative  top-0">
+            <header>
                 <Navbar/>
             </header>
         
