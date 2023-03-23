@@ -19,7 +19,7 @@ usando os conceitos de layout vistos no curso. Este requisito é um pouco subjet
 mas a ideia é que o aplicativo tenha aparência de um aplicativo real, algo que você mostraria a um amigo (ou um investidor, quem sabe?). 
 Uma paleta de cores bem pensada, seguindo o Material Design, por exemplo, é essencial!  ✔️
 - R2: O aplicativo deve ter mais do que uma tela/página. (tem uma identidade)  ✔️
-- R3: O aplicativo deve acessar a rede. O acesso à rede pode ser com um back-end falso, mas deve existir e estar implementado. 
+- R3: O aplicativo deve acessar a rede. O acesso à rede pode ser com um back-end falso, mas deve existir e estar implementado. ✔️
 - R4: O aplicativo deve possuir layout responsivo, sendo adequado para visualização em celulares/tablets/desktop. ✔️
 - R5: O aplicativo deve utilizar alguma API adicional, tais como geolocalização, storage, web workers, etc. 
 
