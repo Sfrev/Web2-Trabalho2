@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { MdMenu } from "react-icons/md";
 import { useState } from "react";
+import { MdMenu } from "react-icons/md";
+
 
 export function Navbar() {
     const [floatMenuShown, setFloatMenuShown] = useState(false);
@@ -27,33 +28,65 @@ export function Navbar() {
                     </ul>
             </div>
             {/* Dropdown Menu */}
-            <label id='label-dropdown-navbar-menu' for='dropDown' onClick={toggleFloatMenuShown}
-            className="inline-flex items-center px-4 py-4 text-sm text-gray-500 rounded-lg hover:bg-red-100 focus:outline-none focus:ring-2
-             focus:ring-red-200 active:bg-red-500 active:shadow-lg transition duration-150 ease-in-out md:hidden cursor-pointer">
-                    <i class='material-symbols-outlined w-6 h-6'>
-                        menu
-                    </i>
-            </label>
-                
-            <div className="hidden w-full md:flex md:items-center md:w-auto md:justify-between" id="target">
-                    <ul className="
-                                    text-base text-gray-700
-                                    pt-4
-                                    md:flex
-                                    md:justify-between
-                                    md:pt-0">
-                        <li>
-                            <Link to="/" className="md:p-4 py-2 block hover:text-red-400">
-                            Cardápio
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/login" className="md:p-4 py-2 block hover:text-red-400 text-red-500">
-                            Log in
-                            </Link>
-                        </li>
-                    </ul>
+            <div className="cursor-pointer">
+                <MdMenu onClick={toggleFloatMenuShown}
+                className="text-2xl md:hidden text-gray-500 rounded-lg hover:bg-red-100 focus:outline-none focus:ring-2
+                focus:ring-red-200 active:bg-red-500 active:shadow-lg transition duration-150 ease-in-out select-none"/>
+                <div className="relative"> 
+                    <div className={`absolute right-0 top-0 flex md:hidden flex-col items-center drop-shadow transition-all duration-500
+                    bg-slate-200 border-solid border-2 border-white rounded-xl p-4
+                    ${floatMenuShown ? 'visible opacity-100' : 'collapse opacity-0'}`}>
+                                        
+                        <Link to="/" className="text-base text-gray-700 hover:text-red-400 select-none">
+                        Cardápio
+                        </Link>
+                            
+                            
+                        <Link to="/login" className=" hover:text-red-400 text-red-500 select-none">
+                        Log in
+                        </Link>
+                    </div>
                 </div>
+            </div>
+            <div className="hidden w-full md:flex md:items-center md:w-auto md:justify-between">
+                <ul className="
+                        text-base text-gray-700
+                        pt-4
+                        md:flex
+                        md:justify-between
+                        md:pt-0">
+                    <li>
+                        <Link to="/" className="md:p-4 py-2 block hover:text-red-400">
+                            Cardápio
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/login" className="md:p-4 py-2 block hover:text-red-400 text-red-500">
+                            Log in
+                        </Link>
+                    </li>
+                </ul>
+            </div>
         </nav>
     )
+    // return (
+    //     <div className="w-full bg-gray-300 dark:bg-slate-800 text-white flex flex-row p-3 justify-between items-center">
+    //         <Link to="/" className="text-blue-800 dark:text-blue-400 text-center text-base sm:text-2xl font-black uppercase select-none">Bolão da copa</Link>
+    //         <div className="cursor-pointer">
+    //             <MdMenu onClick={toggleFloatMenuShown} className="text-2xl sm:hidden text-green-700
+    //              dark:text-green-400 dark:hover:text-green-200 hover:text-green-900 select-none" />
+    //             <div className="relative">
+    //                 <div className={`absolute right-0 top-0 flex sm:hidden flex-col items-center 
+                        // bg-gray-300 dark:bg-slate-800 border-solid border-2 border-white dark:border-slate-600 rounded-xl p-4 drop-shadow transition-all duration-500 ${floatMenuShown ? 'visible opacity-100' : 'collapse opacity-0'}`}>
+    //                     <Link to="/placeBet" className="text-green-700 hover:text-green-900 dark:text-green-400 dark:hover:text-green-200 mb-4 select-none">Palpitar</Link>
+    //                     <Link to="/viewBets" className="text-green-700 hover:text-green-900 dark:text-green-400 dark:hover:text-green-200 select-none">Ver</Link>
+    //                 </div>
+    //             </div>
+    //         </div>
+    //         <div className="hidden sm:flex items-center">
+    //             <Link to="/placeBet" className="text-green-700 hover:text-green-900 dark:text-green-400 dark:hover:text-green-200 mr-10 select-none">Palpitar</Link>
+    //             <Link to="/viewBets" className="text-green-700 hover:text-green-900 dark:text-green-400 dark:hover:text-green-200 select-none">Ver</Link>
+    //         </div>
+    //     </div>
+    // );
 }
