@@ -11,7 +11,7 @@ export function Navbar() {
     }
 
     return (
-        <nav className="flex flex-wrap  items-center  justify-between w-full text-lg text-gray-700 bg-white p-2">
+        <nav className="flex flex-wrap  items-center  justify-between w-full text-lg text-gray-700 bg-slate-100 p-2">
             <div>
                 {/* Logo */}
                 <ul className="text-base text-gray-700 flex justify-between pt-0">
