@@ -5,11 +5,11 @@ function PaginaPrincipal() {
     return (
         <div className="antialiased bg-gradient-to-r from-green-500 via-white to-red-500 scroll-smooth">
             {/* <!-- Navbar --> */}
-            <header>
+            <header className="sticky top-0">
                 <Navbar/>
             </header>
         
-            {/* <!-- Botão de pesquisa --> */}
+            {/* <!-- Botão de pesquisa -->
             <form className="container my-12 mx-auto px-4 md:px-12">
                 <div className="relative flex items-center flex-wrap">
                     <div className="absolute inset-y-0 flex items-center pl-3 pointer-events-none">
@@ -18,7 +18,7 @@ function PaginaPrincipal() {
                     <input type="search" id="default-search" className="block w-auto md:w-1/3 p-4 pl-12 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none" placeholder="Procurar pizzas" required />
                     <button type="submit" className="ml-2 px-4 py-4 text-gray-50  bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm">Search</button>
                 </div>
-            </form>
+            </form> */}
 
             {/* <!-- Responsive Cards Grid --> */}
             <div className="container my-12 mx-auto px-4 md:px-12">
