@@ -44,7 +44,7 @@ router.post('/register', async (req, res) => {
         return res.status(201).send({ user, token });
     }
     catch (err) {
-        return res.status(404).send({ erro: `Registration failed, ${err}` });
+        return res.status(500).send({ erro: `Registration failed, ${err}` });
     }
 });
 
@@ -78,7 +78,7 @@ router.post('/authenticate', async (req, res) => {
         res.status(200).send({ user, token });
     }
     catch(err) {
-        return res.status(404).send({ erro: `Authentication failed, ${err}` });
+        return res.status(500).send({ erro: `Authentication failed, ${err}` });
     }
 });
 
@@ -106,7 +106,7 @@ router.delete('/delete', async (req, res) => {
         return res.status(204).send();
     }
     catch(err) {
-        return res.status(404).send({ erro: `Delete failed ${err}` });
+        return res.status(500).send({ erro: `Delete failed ${err}` });
     }
 });
 
@@ -137,7 +137,7 @@ router.get('/list', async (req, res) => {
         return res.status(200).send({ users });
 
     }catch(err) {
-        return res.status(404).send({ erro: `Error ${err}` });
+        return res.status(500).send({ erro: `Error ${err}` });
     }
 });
 
@@ -148,7 +148,7 @@ router.delete('/delete-all', async (res) => {
         await User.deleteMany({});
         return res.status(204).send();
     }catch(err) {
-        return res.status(404).send({ erro: `Error ${err}` });
+        return res.status(500).send({ erro: `Error ${err}` });
     }
 });
 
