@@ -235,9 +235,6 @@ function PaginaPrincipal() {
                                         Pimenta
                                     </a>
                                 </h1>
-                                <span className="material-symbols-outlined cursor-pointer text-grey-darker text-sm">
-                                    shopping_cart
-                                </span>
                             </header>
 
                             <p className="text-gray-700 text-base p-2 md:p-4 flex items-center justify-between leading-tight">
