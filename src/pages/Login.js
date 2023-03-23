@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
 import { Navbar } from "../components/Navbar";
-import { login } from "../services/AuthService";
+import { login, getName } from "../services/AuthService";
 import { useNavigate } from "react-router-dom";
+import { Button } from "../components/Button";
+import { FormInput } from "../components/FormInput";
 
 function Login() {
   const navigate = useNavigate();
@@ -12,8 +13,14 @@ function Login() {
 
   const handleEmail = (e) => {
     const emailInput = e.target.value
-    localStorage.setItem("email", emailInput)
-}
+    setEmail(emailInput)
+    //localStorage.setItem("email", emailInput)
+  }
+
+  const handlePassword = (e) => {
+    const passwordInput = e.target.value
+    setPassword(passwordInput)
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -28,9 +35,19 @@ function Login() {
         return
       }
 
-      localStorage.removeItem("email")
+      setIsLoginInvalid(false)
+      //localStorage.removeItem("email")
+      try{
+        const name = await getName(email)
+        localStorage.setItem("nome", name)
+      }
+      catch(e){
+        console.log(e)
+      }
       navigate("/")
+      
     } catch (e) {
+      console.log(e)
       setIsLoginInvalid(true)
     }
   }
@@ -56,33 +73,33 @@ function Login() {
                         />
                         <h4 className="text-xl font-semibold mt-1 mb-12 pb-1">Pizzaria Peça Já</h4>
                       </div>
-                      <form>
+                      <form onSubmit={handleSubmit} action="/">
                         <p className="mb-4">Por favor faça login em sua conta</p>
+                        {isLoginInvalid &&
+                          <p className="w-full justify-center bg-red-700 text-white rounded-lg h-8 items-center flex mb-8">E-mail ou senha inválidos</p>
+                        }
                         <div className="mb-4">
-                          <input
-                            type="text"
-                            className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-red-500 focus:outline-none"
-                            id="usuario"
-                            placeholder="Usuário"
+                          <FormInput
+                            id="email"
+                            value={email}//isLoginInvalid ? localStorage.getItem("email"): {}}
+                            label="Email"
+                            type="email"
+                            size="full"
+                            onChange={handleEmail}
                           />
                         </div>
                         <div className="mb-4">
-                          <input
-                            type="password"
-                            className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-red-500 focus:outline-none"
+                          <FormInput
                             id="senha"
-                            placeholder="Senha"
+                            value={password}
+                            label="Senha"
+                            type="password"
+                            size="full"
+                            onChange={handlePassword}
                           />
                         </div>
                         <div className="text-center pt-1 mb-12 pb-1">
-                          <button onclick="location.href='/'"
-                            className="antialiased inline-block px-6 py-2.5 text-black bg-green-500 font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-500 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full mb-3"
-                            type="button"
-                            data-mdb-ripple="true"
-                            data-mdb-ripple-color="light"
-                          >
-                            Log in
-                          </button>
+                          <Button label="Login" action="none" type={"submit"} />
                           <a className="text-gray-500" href="#!">Esqueceu sua senha?</a>
                         </div>
                         <div className="flex items-center justify-between pb-6">

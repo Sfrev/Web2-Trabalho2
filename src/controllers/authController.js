@@ -130,7 +130,7 @@ router.get('/list', async (req, res) => {
 
         const users = await User.find( query );
 
-        if (users.length == 0) {
+        if (users.length === 0) {
             return res.status(404).send({ erro: 'Users not found' });
         }
 
@@ -143,7 +143,7 @@ router.get('/list', async (req, res) => {
 
 
 // APENAS PARA DEBUG
-router.delete('/delete-all', async (res) => {
+router.delete('/delete-all', async (req, res) => {
     try {
         await User.deleteMany({});
         return res.status(204).send();
