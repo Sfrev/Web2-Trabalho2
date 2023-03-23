@@ -1,8 +1,8 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 
 import Layout from "./pages/Layout";
-import PaginaPrincipal from "./pages/PaginaPrincipalteste";
-import Login from "./pages/Loginteste";
+import PaginaPrincipal from "./pages/PaginaPrincipal";
+import Login from "./pages/Login";
 
 
 function App() {
