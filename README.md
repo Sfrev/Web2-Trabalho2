@@ -21,7 +21,7 @@ Uma paleta de cores bem pensada, seguindo o Material Design, por exemplo, é ess
 - R2: O aplicativo deve ter mais do que uma tela/página. (tem uma identidade)  ✔️
 - R3: O aplicativo deve acessar a rede. O acesso à rede pode ser com um back-end falso, mas deve existir e estar implementado. ✔️
 - R4: O aplicativo deve possuir layout responsivo, sendo adequado para visualização em celulares/tablets/desktop. ✔️
-- R5: O aplicativo deve utilizar alguma API adicional, tais como geolocalização, storage, web workers, etc. 
+- R5: O aplicativo deve utilizar alguma API adicional, tais como geolocalização, storage, web workers, etc. ✔️
 
 ## Tecnologias e Linguagens.
 
@@ -29,4 +29,13 @@ As tecnologias envolvidas são React, Tailwind e Nodemon, utilizando como lingua
 
 ## Compilação.
 
-Para rodar o site executamos os seguintes comandos.
+Para rodar o site executamos os seguintes comandos na pasta raíz do projeto.  
+
+Para rodar o frontend
+``` npm start ```  
+
+Para rodar o backend
+``` nodemon ./src/backend/index.js ```  
+
+Para rodar o tailwind
+``` npm run tailwind-watch ```  
