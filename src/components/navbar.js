@@ -5,8 +5,9 @@ import { useState } from "react";
 export function Navbar() {
     const [floatMenuShown, setFloatMenuShown] = useState(false);
 
-    function toggleFloatMenuShown() {
+    const toggleFloatMenuShown = (event) => {
         setFloatMenuShown(!floatMenuShown);
+        event.stopPropagation()
     }
 
     return (
@@ -26,7 +27,12 @@ export function Navbar() {
                         </li>
                     </ul>
             </div>
-            <MdMenu onClick={toggleFloatMenuShown} className="inline-flex items-center px-4 py-4 text-sm text-gray-500 rounded-lg hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-red-200 active:bg-red-500 active:shadow-lg transition duration-150 ease-in-out md:hidden cursor-pointer" />
+            <label id='label-dropdown-navbar-menu' for='checkbox-dropdown-navbar-menu' class="inline-flex items-center px-4 py-4 text-sm text-gray-500 rounded-lg hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-red-200 active:bg-red-500 active:shadow-lg transition duration-150 ease-in-out md:hidden cursor-pointer">
+                    <i class='material-symbols-outlined w-6 h-6'>
+                        menu
+                    </i>
+                </label>
+                <input type='checkbox' id='checkbox-dropdown-navbar-menu' class="hidden"/>
             <div className="hidden w-full md:flex md:items-center md:w-auto md:justify-between" id="target">
                     <ul className="
                                     text-base text-gray-700
