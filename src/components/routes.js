@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, BrowserRouter } from "react-router-dom";
 
-import PaginaPrincipal from "../pages/PaginaPrincipal";
-import Login from "../pages/Login";
+import PaginaPrincipal from "../pages/PaginaPrincipalteste";
+import Login from "../pages/Loginteste";
 
 const Routes = () => {
    return(
