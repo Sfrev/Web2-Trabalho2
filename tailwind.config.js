@@ -1,8 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  darkMode: 'class',
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'solitreo': ['Solitreo', 'cursive'],
+        'caveat': ['Caveat', 'cursive'],
+      }
+    },
   },
-  plugins: [],
+  plugins: [
+    {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  ],
 }
