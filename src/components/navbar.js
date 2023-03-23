@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { MdMenu } from "react-icons/md";
 import { useState } from "react";
 
-export function navbar() {
+export function Navbar() {
     const [floatMenuShown, setFloatMenuShown] = useState(false);
 
     function toggleFloatMenuShown() {

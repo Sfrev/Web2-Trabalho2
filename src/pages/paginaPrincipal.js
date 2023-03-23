@@ -1,8 +1,11 @@
+import { Navbar } from "../components/Navbar";
+
 
 function PaginaPrincipal() {
   return (
-    <div>
-      <h1>Página Principal</h1>
+    <div className="">
+        <Navbar />
+        <h1>Página Principal</h1>
     </div>
   );
 }
